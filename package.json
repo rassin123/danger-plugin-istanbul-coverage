@@ -26,7 +26,6 @@
   "scripts": {
     "commit": "git-cz",
     "build": "tsc",
-    "postinstall": "tsc",
     "test": "jest --collectCoverage",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release",
@@ -34,6 +33,7 @@
     "prettier-write": "npm run prettier -- --parser typescript --no-semi --trailing-comma es5 --write --print-width 120",
     "prettier-project": "npm run prettier-write -- 'src/**/*.{ts,tsx}'",
     "lint": "tslint \"src/**/*.ts\"",
+    "postinstall": "tsc"
   },
   "license": "MIT",
   "engines": {
