@@ -30,7 +30,7 @@ export interface CoverageModel {
 
 function combineItems(first: CoverageItem, second: CoverageItem): CoverageItem {
   const percentage =
-    second.covered + first.covered > 0 ? 100 * (first.covered + second.covered) / (second.total + first.total) : 100
+    second.covered + first.covered >= 0 ? 100 * (first.covered + second.covered) / (second.total + first.total) : 100
   return {
     total: first.total + second.total,
     covered: first.covered + second.covered,

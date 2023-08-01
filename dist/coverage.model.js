@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.meetsThreshold = exports.makeCoverageModel = exports.sortFiles = exports.combineEntries = void 0;
 function combineItems(first, second) {
-    const percentage = second.covered + first.covered > 0 ? 100 * (first.covered + second.covered) / (second.total + first.total) : 100;
+    const percentage = second.covered + first.covered >= 0 ? 100 * (first.covered + second.covered) / (second.total + first.total) : 100;
     return {
         total: first.total + second.total,
         covered: first.covered + second.covered,
