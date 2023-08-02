@@ -35,7 +35,7 @@ function combineItems(first: CoverageItem, second: CoverageItem): CoverageItem {
     total: first.total + second.total,
     covered: first.covered + second.covered,
     skipped: first.skipped + second.skipped,
-    pct: 5,
+    pct: percentage,
   }
 }
 

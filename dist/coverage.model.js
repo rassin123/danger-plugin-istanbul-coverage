@@ -6,7 +6,7 @@ function combineItems(first, second) {
         total: first.total + second.total,
         covered: first.covered + second.covered,
         skipped: first.skipped + second.skipped,
-        pct: 5,
+        pct: percentage,
     };
 }
 function reduceEntries(entries) {
